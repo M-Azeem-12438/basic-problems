@@ -180,7 +180,7 @@ function hello()
         document.getElementById("specialresult").innerHTML=specialValue+" is a special character "
     }
 }
-function string()
+function string1()
 {
 var strlen=document.getElementById("str").value
 document.getElementById("strresult").innerHTML="string length is "+strlen.length
@@ -224,8 +224,95 @@ function uppercase()
     lowstr=lowstr.toUpperCase();
     document.getElementById("upperresult").innerHTML="string in upper case `"+lowstr+"`"
 }
-function togglecase1()
+// function togglecase1()
+// {   
+//     var lowstr1=document.getElementById("toggle").value
+//     if(lowstr1===lowstr1.toLowerCase())
+//     {
+//         lowstr1=lowstr1.toLowerCase()
+//         console.log(lowstr1);
+//     }
+//    else if(lowstr1===lowstr1.toUpperCase())
+//     {
+//         lowstr1=lowstr1.toUpperCase()
+//         console.log(lowstr1);
+//     }
+    
+//   }
+  function aaaa()
+  {
+      var array=document.getElementById("totleno").value
+      var alpha=0
+      var num=0
+      var sign=0
+      for (let index = 0; index < array.length; index++)
+       {
+        if (array[index]>="a" &&array[index]<="z"||array[index]>="A"&&array[index]<="Z")   
+        {
+         alpha=alpha+1;
+        }
+        else if (array[index]>=0 &&array[index]<=9)   
+        {
+        num=num+1;
+        }
+        else
+        {
+            sign=sign+1
+        }
+      }
+      document.getElementById("charresult1").innerHTML="Alphabets = "+alpha+", Digits = "+num+", Special char = "+sign;
+    }
+    function aavow()
+  {
+      var array=document.getElementById("totlevo").value
+      var con=0
+      var vow=0
+      for (let index = 0; index < array.length; index++)
+       {
+        if (array[index]=="a"||array[index]=="e"||array[index]=="i"||array[index]=="o"||array[index]=="u")   
+        {
+         vow=vow+1;
+        }
+        
+        else
+        {
+            con=con+1
+        }
+      }
+      document.getElementById("charvow").innerHTML="Consonents = "+con+", Vowels = "+vow;
+    }
+
+      function wordcount1()
+      { 
+          var countwords=document.getElementById("countw").value;
+          var word=1;
+          for (let index = 0; index < countwords.length; index++)
+           {
+              if(countwords[index]==" ")
+              {
+                  word=word+1;
+              }
+              
+          }
+          document.getElementById("wordcount").innerHTML="Number of words = "+word;
+      }
+//   function reversestr()
+//   {
+//       var reverse=document.getElementById("reverse").value
+//       for (let index = 0; index < reverse.length; index++) {
+//           reverse[index];
+          
+//       }
+//       for (let index = reverse.length; index =0; index--) {
+         
+//           document.getElementById("reverseresult").innerHTML=reverse[index]
+//       }
+//   }
+function arrayprint()
 {
-    var lowstr1=document.getElementById("toggle").value
-  
+    var arrayp=document.getElementById("arrayp").value
+    for (let index = 0; index < arrayp.length; index++) {
+      
+        document.getElementById("arraypr").innerHTML=arrayp
+    }  
 }
